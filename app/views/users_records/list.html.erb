@@ -1,0 +1,28 @@
+
+	<table>
+		<thead>
+			<tr>
+				<th>firstname</th>
+				<th>lastname</th>
+				<th>Address</th>
+				<th>Phone_number</th>
+				<th>email</th>
+				<th>action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @users_records.each do|users_record| %>
+<tr>
+	<td><%= users_record.firstname%></td>
+	<td><%= users_record.lastname%></td>
+	<td><%= users_record.address%></td>
+	<td><%= users_record.Phone_number%></td>
+	<td><%= users_record.email%></td>
+	<td><%= link_to'view',users_record_path(@users_record)%>
+		<%= link_to 'Edit', edit_users_record_path(@users_record) %>
+		<%= link_to 'delete',users_record_path(@users_record), method: :delete,data:{confirm:"are you sure?"}%>
+		 </td>
+</tr>
+<% end %>
+		</tbody>
+	</table>

@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  add_comment: MyText
+  users_records_id: 1
+
+two:
+  add_comment: MyText
+  users_records_id: 1
